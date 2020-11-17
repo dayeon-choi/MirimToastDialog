@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         textName=findViewById(R.id.text_name);
         textEmail=findViewById(R.id.text_email);
         btnHere=findViewById(R.id.btn_here);
