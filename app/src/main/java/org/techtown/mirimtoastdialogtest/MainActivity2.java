@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -59,6 +62,12 @@ public class MainActivity2 extends AppCompatActivity {
             textToast=toastView.findViewById(R.id.text_toast2);
             textToast.setText("취소버튼을 누르셨네요.");
             toast.setView(toastView);
+
+            Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
+            int xOffset = (int) (Math.random() * display.getWidth());
+            int yOffset = (int) (Math.random() * display.getHeight());
+
+            toast.setGravity(Gravity.TOP | Gravity.LEFT, xOffset, yOffset);
             toast.show();
         }
     };
